@@ -1,0 +1,26 @@
+{
+  "name": "zero-sight-protocol",
+  "version": "1.0.0",
+  "description": "A secure, zero-knowledge, PIN-based encryption protocol for custodial Web3 wallets.",
+  "main": "src/zsp.js",
+  "keywords": ["wallet", "encryption", "PIN", "web3", "custodial", "security", "crypto"],
+  "author": "Your Name or Org",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dejaguarkyng/zsp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dejaguarkyng/zsp/issues"
+  },
+  "homepage": "https://github.com/dejaguarkyng/zsp#readme",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "chai": "^4.3.0"
+  }
+}
