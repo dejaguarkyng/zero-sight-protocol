@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/zero-sight-protocol.svg)](https://www.npmjs.com/package/zero-sight-protocol)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/github/workflow/status/yourusername/zero-sight-protocol/CI)](https://github.com/yourusername/zero-sight-protocol/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/dejaguarkyng/zero-sight-protocol/CI)](https://github.com/yourusername/zero-sight-protocol/actions)
 
 ZSP enables **zero-knowledge, zero-storage authentication** by leveraging AES encryption, PIN-based key derivation (PBKDF2), and stateless session tokens. Your users' PINs are never stored, and wallet decryption serves as PIN verification.
 

@@ -1,6 +1,6 @@
 {
   "name": "zero-sight-protocol",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A secure, zero-knowledge, PIN-based encryption protocol for custodial Web3 wallets.",
   "main": "src/zsp.js",
   "keywords": ["wallet", "encryption", "PIN", "web3", "custodial", "security", "crypto"],
