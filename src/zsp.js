@@ -1,4 +1,5 @@
-import { encrypt, decrypt } from './crypto/encrypt.js';
+import { encrypt} from './crypto/encrypt.js';
+import { decrypt } from './crypto/decrypt.js';
 import { deriveKey } from './key/deriveKey.js';
 import { createSessionToken, verifySessionToken } from './session/sessionManager.js';
 import { generateOtp, verifyOtp } from './recovery/otpManager.js';
