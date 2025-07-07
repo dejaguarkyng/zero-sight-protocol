@@ -5,7 +5,7 @@ import { createSessionToken, verifySessionToken } from './session/sessionManager
 import { generateOtp, verifyOtp } from './recovery/otpManager.js';
 import { initiateRecovery, verifyRecovery, resetPin } from './recovery/recoveryManager.js';
 import { addTrustedDevice, isTrustedDevice, removeTrustedDevice } from './recovery/device.js';
-
+import crypto from 'crypto';
 export default class ZeroSightProtocol {
   // Encrypt data with a user PIN
   static async encryptWallet(pin, walletData) {
