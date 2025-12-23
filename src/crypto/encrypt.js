@@ -1,5 +1,5 @@
-import crypto from 'crypto';
-import { generateIV } from '../key/entropy.js';
+import crypto from "crypto"
+import { generateIV } from "../key/entropy.js"
 
 /**
  * Encrypts plaintext data using AES-256-GCM.
@@ -8,19 +8,38 @@ import { generateIV } from '../key/entropy.js';
  * @returns {{ iv: string, ciphertext: string, tag: string }}
  */
 export function encrypt(key, data) {
-  const iv = generateIV();
-  const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
+  const iv = generateIV()
+  const cipher = crypto.createCipheriv("aes-256-gcm", key, iv)
 
-  const ciphertext = Buffer.concat([
-    cipher.update(data, 'utf8'),
-    cipher.final()
-  ]);
+  const ciphertext = Buffer.concat([cipher.update(data, "utf8"), cipher.final()])
 
-  const tag = cipher.getAuthTag();
+  const tag = cipher.getAuthTag()
 
   return {
-    iv: iv.toString('hex'),
-    ciphertext: ciphertext.toString('hex'),
-    tag: tag.toString('hex')
-  };
+    iv: iv.toString("hex"),
+    ciphertext: ciphertext.toString("hex"),
+    tag: tag.toString("hex"),
+  }
+}
+
+/**
+ * Encrypts data using a client secret (hashed to 32-byte key).
+ * @param {string} clientSecret - The client secret to hash for encryption.
+ * @param {string|Buffer} plaintext - Data to encrypt.
+ * @returns {{ iv: string, ciphertext: string, tag: string }}
+ */
+export function encryptWithSecret(clientSecret, plaintext) {
+  const key = crypto.createHash("sha256").update(clientSecret).digest()
+  const iv = generateIV()
+  const cipher = crypto.createCipheriv("aes-256-gcm", key, iv)
+
+  const ciphertext = Buffer.concat([cipher.update(plaintext, "utf8"), cipher.final()])
+
+  const tag = cipher.getAuthTag()
+
+  return {
+    iv: iv.toString("hex"),
+    ciphertext: ciphertext.toString("hex"),
+    tag: tag.toString("hex"),
+  }
 }

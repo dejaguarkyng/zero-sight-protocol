@@ -21,7 +21,6 @@ export async function initiateRecovery(email, phone, encryptedWallet, salt) {
   const recoveryKey = combineSecret(email, phone);
   recoverySessions.set(recoveryKey, { encryptedWallet, salt });
 
-  // Use your email/SMS services to send these
   return { otpEmail, otpSMS };
 }
 
