@@ -1,6 +1,8 @@
-# Zero Sight Protocol (ZSP)
+# Zero Sight Protocol (ZSP)  ![npm](https://img.shields.io/npm/v/zero-sight-protocol.svg) ![License](https://img.shields.io/npm/l/zero-sight-protocol.svg) ![Build](https://github.com/dejaguarkyng/zsp/actions/workflows/ci.yml/badge.svg) ![Tests](https://img.shields.io/badge/tests-vitest-blue)
 
-A robust, production-ready cryptographic library for secure wallet encryption, recovery management, and session handling. Includes client secret-based encryption for app-level PIN protection.
+A robust, production-ready cryptographic library for secure wallet encryption, recovery management, and session handling with PIN-based and client-secret-based encryption.
+
+**Requirements:** Node.js >= 16 (LTS recommended)
 
 ## Features
 
@@ -14,9 +16,25 @@ A robust, production-ready cryptographic library for secure wallet encryption, r
 
 ## Installation
 
+Preferred (pnpm):
+
+```bash
+pnpm add zero-sight-protocol
+```
+
+Or with npm:
+
 ```bash
 npm install zero-sight-protocol
 ```
+
+Or with yarn:
+
+```bash
+yarn add zero-sight-protocol
+```
+
+**Note:** This package is ESM-only (see `package.json` `"type": "module"`); use `import` syntax.
 
 ## Quick Start
 
@@ -339,10 +357,24 @@ async function validateUserPin(encryptedPayload, clientSecret) {
 
 ## Testing
 
-The library includes comprehensive tests for all cryptographic operations. Run tests with:
+The library includes comprehensive tests for all cryptographic operations (powered by Vitest).
+
+Run all tests (recommended):
+
+```bash
+pnpm test
+```
+
+Or with npm:
 
 ```bash
 npm test
+```
+
+Run a single test by name (Vitest):
+
+```bash
+pnpm test -t "test name"
 ```
 
 ## License
@@ -351,4 +383,18 @@ MIT
 
 ## Contributing
 
-Contributions are welcome! Please ensure all tests pass and add new tests for any new functionality.
+Contributions are welcome! To contribute:
+
+- Fork the repository and create a feature branch.
+- Run tests locally and add tests for new features or bug fixes.
+- Follow existing code style and keep changes focused and well-documented.
+- Open a PR with a clear description and link to any related issues.
+
+Run tests locally:
+
+```bash
+pnpm install
+pnpm test
+```
+
+Please report bugs or feature requests via GitHub Issues: https://github.com/dejaguarkyng/zsp/issues

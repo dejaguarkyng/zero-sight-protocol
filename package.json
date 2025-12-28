@@ -1,6 +1,6 @@
 {
   "name": "zero-sight-protocol",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A secure, zero-knowledge, PIN-based encryption protocol for custodial Web3 wallets.",
   "keywords": [
     "wallet",
@@ -24,26 +24,9 @@
   "type": "module",
   "main": "src/zsp.js",
   "scripts": {
-    "test": "mocha"
-  },
-  "dependencies": {
-    "class-variance-authority": "0.7.1",
-    "clsx": "2.1.1",
-    "lucide-react": "0.562.0",
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind-merge": "3.4.0",
-    "tailwindcss-animate": "1.0.7"
+    "test": "vitest"
   },
   "devDependencies": {
-    "@types/node": "25.0.3",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
-    "chai": "^4.3.0",
-    "mocha": "^10.0.0",
-    "postcss": "8.5.6",
-    "tailwindcss": "4.1.18",
-    "typescript": "5.9.3"
+    "vitest": "^1.0.0"
   }
 }
