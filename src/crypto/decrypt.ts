@@ -8,7 +8,7 @@ import crypto from "crypto"
  * @param {string} tagHex - Hex-encoded GCM tag.
  * @returns {string} - Decrypted plaintext.
  */
-export function decrypt(key, ivHex, ciphertextHex, tagHex) {
+export function decrypt(key: Buffer, ivHex: string, ciphertextHex: string, tagHex: string): string {
   const iv = Buffer.from(ivHex, "hex")
   const ciphertext = Buffer.from(ciphertextHex, "hex")
   const tag = Buffer.from(tagHex, "hex")
@@ -29,7 +29,12 @@ export function decrypt(key, ivHex, ciphertextHex, tagHex) {
  * @param {string} tagHex - Hex-encoded GCM tag.
  * @returns {string} - Decrypted plaintext.
  */
-export function decryptWithSecret(clientSecret, ivHex, ciphertextHex, tagHex) {
+export function decryptWithSecret(
+  clientSecret: string,
+  ivHex: string,
+  ciphertextHex: string,
+  tagHex: string,
+): string {
   const key = crypto.createHash("sha256").update(clientSecret).digest()
   const iv = Buffer.from(ivHex, "hex")
   const ciphertext = Buffer.from(ciphertextHex, "hex")

@@ -6,8 +6,8 @@ import crypto from 'crypto';
  * @param {Buffer} salt - A unique salt (from entropy.js).
  * @returns {Promise<Buffer>} - Derived 32-byte key.
  */
-export function deriveKey(secret, salt) {
-  return new Promise((resolve, reject) => {
+export function deriveKey(secret: string, salt: Buffer | string) {
+  return new Promise<Buffer>((resolve, reject) => {
     crypto.scrypt(secret, salt, 32, { cost: 16384, blockSize: 8, parallelization: 1 }, (err, derivedKey) => {
       if (err) reject(err);
       else resolve(derivedKey);

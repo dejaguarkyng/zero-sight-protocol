@@ -1,15 +1,15 @@
 {
   "name": "zero-sight-protocol",
   "version": "2.0.2",
-  "description": "A secure, zero-knowledge, PIN-based encryption protocol for custodial Web3 wallets.",
+  "description": "A general-purpose cryptographic toolkit for secure data encryption, payload validation, sessions, and recovery flows.",
   "keywords": [
-    "wallet",
     "encryption",
-    "PIN",
-    "web3",
-    "custodial",
     "security",
-    "crypto"
+    "crypto",
+    "aes-256-gcm",
+    "session",
+    "otp",
+    "typescript"
   ],
   "homepage": "https://github.com/dejaguarkyng/zsp#readme",
   "bugs": {
@@ -22,11 +22,23 @@
   "license": "MIT",
   "author": "Your Name or Org",
   "type": "module",
-  "main": "src/zsp.js",
+  "main": "dist/zsp.js",
+  "types": "dist/zsp.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/zsp.js",
+      "types": "./dist/zsp.d.ts"
+    }
+  },
   "scripts": {
-    "test": "vitest"
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
     "vitest": "^1.0.0"
   }
 }

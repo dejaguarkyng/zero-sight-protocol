@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import ZeroSightProtocol from '../src/zsp.js'
-import { deriveKey } from '../src/key/deriveKey.js'
-import { encrypt } from '../src/crypto/encrypt.js'
-import { decrypt as decryptFn } from '../src/crypto/decrypt.js'
+import ZeroSightProtocol from '../src/zsp.ts'
+import { deriveKey } from '../src/key/deriveKey.ts'
+import { encrypt } from '../src/crypto/encrypt.ts'
+import { decrypt as decryptFn } from '../src/crypto/decrypt.ts'
 
 describe('ZeroSightProtocol - core functionality', () => {
   beforeEach(() => {

@@ -1,3 +1,5 @@
 test/
+src/
 .gitignore
-README.md
+tsconfig.json
+vitest.config.ts
