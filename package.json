@@ -11,13 +11,13 @@
     "otp",
     "typescript"
   ],
-  "homepage": "https://github.com/dejaguarkyng/zsp#readme",
+  "homepage": "https://github.com/dejaguarkyng/zero-sight-protocol#readme",
   "bugs": {
-    "url": "https://github.com/dejaguarkyng/zsp/issues"
+    "url": "https://github.com/dejaguarkyng/zero-sight-protocol/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dejaguarkyng/zsp.git"
+    "url": "https://github.com/dejaguarkyng/zero-sight-protocol.git"
   },
   "license": "MIT",
   "author": "Your Name or Org",
