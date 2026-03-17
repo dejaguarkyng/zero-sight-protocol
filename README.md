@@ -166,6 +166,14 @@ Build TypeScript output:
 pnpm build
 ```
 
+This command cleans `dist/` and prints the emitted files.
+
+Clean build artifacts only:
+
+```bash
+pnpm clean
+```
+
 Type-check only:
 
 ```bash
