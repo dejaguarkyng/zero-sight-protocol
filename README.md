@@ -172,6 +172,17 @@ Type-check only:
 pnpm typecheck
 ```
 
+## Open Source
+
+- Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+- Security reporting guidance is in [SECURITY.md](SECURITY.md).
+- Community expectations are documented in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+### Support
+
+- Bugs and features: https://github.com/dejaguarkyng/zero-sight-protocol/issues
+- Security advisories: https://github.com/dejaguarkyng/zero-sight-protocol/security/advisories/new
+
 ## License
 
 MIT
