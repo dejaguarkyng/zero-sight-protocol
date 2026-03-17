@@ -2,7 +2,6 @@
 
 ![npm](https://img.shields.io/npm/v/zero-sight-protocol.svg)
 ![License](https://img.shields.io/npm/l/zero-sight-protocol.svg)
-![Build](https://github.com/dejaguarkyng/zero-sight-protocol/actions/workflows/ci.yml/badge.svg)
 ![Tests](https://img.shields.io/badge/tests-vitest-blue)
 
 Zero Sight Protocol is a general-purpose cryptographic toolkit for protecting sensitive application data. It provides AES-256-GCM encryption helpers, timestamped encrypted payloads, HMAC session tokens, OTP-based recovery flow primitives, and trusted-device tracking.
